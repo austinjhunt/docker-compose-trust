@@ -17,3 +17,16 @@ This script extracts the names of the referenced images from your docker-compose
 ## How does it work?
 Since docker trust prompts for the key-signing passphrases, the script uses the LastPass CLI to pull those passphrases from your LastPass account and
 pass them into either 1) environment variables or 2) stdin.
+## Usage
+1. Clone the repository
+``` git clone https://hammond.cofc.edu/huntaj/docker-compose-trust.git ```
+2. Navigate into the project and source the script to create the alias for the primary function (alias is 'docker-compose-trust')
+``` source docker-compose-sign-all.sh ```
+3. Navigate into the directory where your docker-compose.yml file is that references all of the images you want to sign.
+``` e.g.: cd ~/mycode/ ```
+``` ls ```
+``` docker-compose.yml .....```
+4. Execute the alias
+``` docker-compose-trust ```
+
+
